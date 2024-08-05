@@ -17,8 +17,9 @@
 
 浮动布局相关：
 
-- [`float`](https://developer.mozilla.org/en-US/docs/Web/CSS/float)
-- [`clear`](https://developer.mozilla.org/en-US/docs/Web/CSS/clear)
+- [`float`](https://developer.mozilla.org/en-US/docs/Web/CSS/float)：设置浮动。
+- [`clear`](https://developer.mozilla.org/en-US/docs/Web/CSS/clear)：清除浮动。
+- [`shape-image-threshold`](https://developer.mozilla.org/en-US/docs/Web/CSS/shape-image-threshold)/[`shape-margin`](https://developer.mozilla.org/en-US/docs/Web/CSS/shape-margin)/[`shape-outside`](https://developer.mozilla.org/en-US/docs/Web/CSS/shape-outside)：设置浮动元素的占位区形状。
 
 列布局相关：
 
@@ -37,8 +38,10 @@
 
 网格布局相关：
 
+> 这个网格布局收录还有缺陷。
 
-
+- `grid-area`
+- `grid-gap`
 
 溢出相关：
 
@@ -90,6 +93,8 @@
 ### 14. Page组
 
 ### 15. Layer组/SVG组
+
+- [`shape-rendering`](https://developer.mozilla.org/en-US/docs/Web/CSS/shape-rendering)
 
 ### 16. Others组
 
