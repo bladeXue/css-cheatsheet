@@ -2,13 +2,24 @@
 
 个人向CSS知识点清单。
 
+## 关于布局
+
+## 关于文本
+
+## 关于居中方法
+
+## 关于函数
+
 ## 属性列表
 
 [Index of CSS properties](https://www.w3.org/Style/CSS/all-properties.en.html)提供了完整的属性列表。
 
 ### 1. Layout组
 
+> 布局的任务是：划分页面的画布矩阵，并计算所有元素的应处于的位置和尺寸大小。
+
 - [`display`](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
+- [`visibility`](https://developer.mozilla.org/en-US/docs/Web/CSS/visibility)
 
 定位布局相关：
 
@@ -25,70 +36,148 @@
 
 > 这个列布局收录还有缺陷。
 
-- [`columns`](https://developer.mozilla.org/en-US/docs/Web/CSS/columns)
+- `column-count`
+- `column-width`
+- `column-gap`
 - [`column-rule`](https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule)
+- [`columns`](https://developer.mozilla.org/en-US/docs/Web/CSS/columns)
 
 弹性布局相关：
 
 - [`flex-flow`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-flow)：[`flex-direction`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction)和[`flex-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap)2个弹性容器属性的简写。
 - [`flex`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex)：[`flex-grow`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow)，[`flex-shrink`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink)和[`flex-basis`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis)3个弹性项属性的简写。
-- [`justify-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)/[`justify-items`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items)/[`justify-self`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self)
-- [`align-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content)/[`align-items`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)/[`align-self`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self)
+- [`justify-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)/[`justify-items`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items)/[`justify-self`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self)：主轴对齐方式。
+- [`align-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content)/[`align-items`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)/[`align-self`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self)：交叉轴对齐方式。
 - [`order`](https://developer.mozilla.org/en-US/docs/Web/CSS/order)：顺序权重。
 
 网格布局相关：
 
 > 这个网格布局收录还有缺陷。
 
-- `grid-area`
-- `grid-gap`
+> `justify-items`和`align-items`属性是Flex和Grid系统通用的。
+
+- `grid`：`grid-template-rows`，`grid-template-columns`，`grid-template-areas`，`grid-auto-rows`，`grid-auto-columns`和`grid-auto-flow`6个网格属性的简写。
+- `grid-area`：`grid-row-start`，`grid-column-start`，`grid-row-end`和`grid-column-end`4个网格区域属性的简写。
+- `grid-gap`：`grid-row-gap`和`grid-column-gap`2个网格间距属性的简写。
+- `place-content`/`place-items`/`place-self`：`justify-*`和`align-*`属性在网格系统中的简写。
 
 溢出相关：
 
-- [`overflow`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow)
+- [`overflow`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow)：`overflow-x`和`overflow-y`2个溢出属性的简写。
 
 ### 2. Box组
 
 - [`box-sizing`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
+- [`box-decoration-break`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break)
+- [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
 - [`margin`](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)
 - [`padding`](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
 - [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width)/[`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height)/[`min-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/min-width)/[`min-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/min-height)/[`max-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width)/[`max-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/max-height)
 
-
-
 ### 3. Border组
 
-- `border`：`border-width`，`border-style`和`border-color`3个边框属性的简写。
-- `border-radius`
-- `border-image`
+- [`border`](https://developer.mozilla.org/en-US/docs/Web/CSS/border)：[`border-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-width)，[`border-style`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-style)和[`border-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-color)3个边框属性的简写。
+- [`border-radius`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)
+- [`border-image`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-image)
 
 ### 4. Background组
 
-- `background`：`background-color`在内的8个背景属性的简写。
-- `background-blend-mode`：指定多个背景之间的混合模式。
+- [`background`](https://developer.mozilla.org/en-US/docs/Web/CSS/background)：[`background-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color)，[`background-image`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image)，[`background-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)，[`background-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)，[`background-repeat`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat)，[`background-origin`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin)，[`background-clip`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip)和[`background-attachment`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment)8个背景属性的简写。
+- [`background-blend-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-blend-mode)：背景层之间的混合模式。
 
-### 5. List组
+### 5. Font组
 
-### 6. Table组
+- [`font`](https://developer.mozilla.org/en-US/docs/Web/CSS/font)：[`font-style`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-style)，[`font-variant`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant)，[`font-weight`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight)，[`font-stretch`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-stretch)，[`font-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size)，[`line-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)和[`font-family`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family)7个字体属性的简写。
 
-- `border-collapse`
-- `border-spacing`
+- [`font-kerning`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-kerning)
+- [`font-language-override`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-language-override)：支持较差。
 
-### 7. Font组
+- `font-palette`：支持较差。
+- `font-size-adjust`：属性太新了。
+- `font-synthesis`：属性太新了。
+- `font-variant`：属性太新了。
+- `font-variation-settings`：尚未支持。
 
-### 8. Text组
+- [`font-optical-sizing`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-optical-sizing)
 
+
+- [`font-feature-settings`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings)
+
+> 这里的一些属性其实非常新，可见在新标准中，**文本**依旧是布局的重点。
+
+### 6. Text组
+
+- [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
+
+文本对齐相关：
+
+- `text-align`
+- `text-align-last`
+- `direction`
+- `unicode-bidi`
+- `text-combine-upright`
+- `text-orientation`
 - [`vertical-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align)
 
-### 9. Content组
+文本修饰相关：
+
+- `text-decoration`：`text-decoration-line`，`text-decoration-color`，`text-decoration-style`和`text-decoration-thickness`4个文本修饰属性的简写。
+
+文本转换相关：
+
+- `text-transform`
+
+文本间距相关：
+
+- `text-indent`
+- `letter-spacing`
+- `word-spacing`
+- `white-space`
+
+文本阴影相关：
+
+- `text-shadow`
+
+文本溢出相关：
+
+- `text-overflow`
+
+### 7. Content组
+
+### 8. List组
+
+- `list-style`：`list-style-image`，`list-style-position`和`list-style-type`3个列表属性的简写。
+
+### 9. Table组
+
+- [`border-collapse`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-collapse)
+- [`border-spacing`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-spacing)
+- [`table-layout`](https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout)
+- [`caption-side`](https://developer.mozilla.org/en-US/docs/Web/CSS/caption-side)
+- [`empty-cells`](https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells)
 
 ### 10. Animation组
 
+- [`animation`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)：[`animation-name`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-name)，[`animation-duration`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-duration)，[`animation-timing-function`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function)，[`animation-delay`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay)，[`animation-iteration-count`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count)，[`animation-direction`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)，[`animation-fill-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode)和[`animation-play-state`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state)8个动画属性的简写，其中`animation-name`是由`@keyframes`指定的关键帧名称，且无视属性值顺序（但习惯上放在首位）。
+
 ### 11. Transition组
+
+- `transition`：`transition-property`，`transition-duration`，`transition-timing-function`和`transition-delay`4个过渡属性的简写。
 
 ### 12. Transform组
 
+- `transform`
+- `transform-origin`
+- `transform-style`
+
+- [`backface-visibility`](https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility)：背面可见性。
+- `perspective`
+- `perspective-origin`
+
 ### 13. Appearance组
+
+- [`outline`](https://developer.mozilla.org/en-US/docs/Web/CSS/outline)：[`outline-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/outline-width)，[`outline-style`](https://developer.mozilla.org/en-US/docs/Web/CSS/outline-style)和[`outline-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/outline-color)3个轮廓属性的简写。
+- [`outline-offset`](https://developer.mozilla.org/en-US/docs/Web/CSS/outline-offset)：设置轮廓偏移距离。
 
 ### 14. Page组
 
@@ -97,4 +186,12 @@
 - [`shape-rendering`](https://developer.mozilla.org/en-US/docs/Web/CSS/shape-rendering)
 
 ### 16. Others组
+
+- `z-index`
+- `opacity`
+- `pointer-events`
+- `user-select`
+- [`all`](https://developer.mozilla.org/en-US/docs/Web/CSS/all)
+- clip-path
+- clip-rule
 

@@ -42,7 +42,7 @@
 表格布局相关：
 
 - `table-layout`
-- `captain-side`
+- `caption-side`
 - `empty-cells`
 
 列表布局相关：

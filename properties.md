@@ -60,7 +60,7 @@
 58. box-decoration-break
 59. box-shadow
 60. box-sizing
-61. captain-side
+61. caption-side
 62. clear
 63. clip-path
 64. clip-rule
