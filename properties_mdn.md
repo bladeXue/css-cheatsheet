@@ -173,7 +173,7 @@
 171. [`shape-image-threshold`](https://developer.mozilla.org/en-US/docs/Web/CSS/shape-image-threshold)
 172. [`shape-margin`](https://developer.mozilla.org/en-US/docs/Web/CSS/shape-margin)
 173. [`shape-outside`](https://developer.mozilla.org/en-US/docs/Web/CSS/shape-outside)
-174. [`size`](https://developer.mozilla.org/en-US/docs/Web/CSS/size)
+174. [`size`](https://developer.mozilla.org/en-US/docs/Web/CSS/@page/size)
 175. [`tab-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/tab-size)
 176. [`table-layout`](https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout)
 177. [`text-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
