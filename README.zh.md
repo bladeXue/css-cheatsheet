@@ -14,6 +14,14 @@
 
 [Index of CSS properties](https://www.w3.org/Style/CSS/all-properties.en.html)提供了完整的属性列表。
 
+制作标准：
+
+1. 属性必须来自MDN的有效文档链接。
+2. 基于Chrome Group和个人记忆技巧来分组。
+3. 折叠重复属性，使得每个属性选项最小化。
+4. 有歧义的属性必须添加必要的解释。
+5. 当连续几个属性可以用“同一组解释词”的时候，使用`/`将它们并入同一行。
+
 ### 1. Layout组
 
 > 布局的任务是：划分页面的画布矩阵，并计算所有元素的应处于的位置和尺寸大小。
@@ -54,7 +62,7 @@
 
 > 这个网格布局收录还有缺陷。
 
-> `justify-items`和`align-items`属性是Flex和Grid系统通用的。
+> `justify-items`，`align-items`和`order`属性是Flex和Grid系统通用的。
 
 - `grid`：`grid-template-rows`，`grid-template-columns`，`grid-template-areas`，`grid-auto-rows`，`grid-auto-columns`和`grid-auto-flow`6个网格属性的简写。
 - `grid-area`：`grid-row-start`，`grid-column-start`，`grid-row-end`和`grid-column-end`4个网格区域属性的简写。
@@ -93,9 +101,11 @@
 - [`font-language-override`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-language-override)：支持较差。
 
 - `font-palette`：支持较差。
-- `font-size-adjust`：属性太新了。
-- `font-synthesis`：属性太新了。
-- `font-variant`：属性太新了。
+- [`font-size-adjust`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size-adjust)：属性太新了。
+- [`font-synthesis`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-synthesis)：[`font-synthesis-weight`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-synthesis-weight)，[`font-synthesis-style`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-synthesis-style)，[`font-synthesis-small-caps`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-synthesis-small-caps)和[`font-synthesis-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-synthesis-position)4个字体合成属性的简写，当目标字体缺少诸如粗体或者大小写字体时由浏览器合成这些字体。该属性于2022年完成主流浏览器支持。
+
+
+- [`font-variant`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant)：属性太新了。
 - `font-variation-settings`：尚未支持。
 
 - [`font-optical-sizing`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-optical-sizing)
@@ -113,7 +123,7 @@
 
 - `text-align`
 - `text-align-last`
-- `direction`
+- [`direction`](https://developer.mozilla.org/en-US/docs/Web/CSS/direction)
 - `unicode-bidi`
 - `text-combine-upright`
 - `text-orientation`
@@ -144,6 +154,9 @@
 
 ### 7. Content组
 
+- [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content)
+- [`counter-increment`](https://developer.mozilla.org/en-US/docs/Web/CSS/counter-increment)/[`counter-reset`](https://developer.mozilla.org/en-US/docs/Web/CSS/counter-reset)/[`counter-set`](https://developer.mozilla.org/en-US/docs/Web/CSS/counter-set)
+
 ### 8. List组
 
 - `list-style`：`list-style-image`，`list-style-position`和`list-style-type`3个列表属性的简写。
@@ -170,7 +183,7 @@
 - `transform-origin`
 - `transform-style`
 
-- [`backface-visibility`](https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility)：背面可见性。
+- [`backface-visibility`](https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility)：可变换元素的背面可见性。
 - `perspective`
 - `perspective-origin`
 
@@ -181,17 +194,22 @@
 
 ### 14. Page组
 
-### 15. Layer组/SVG组
+### 15. Layer组/SVG组/Shape组/Mask组
 
 - [`shape-rendering`](https://developer.mozilla.org/en-US/docs/Web/CSS/shape-rendering)
+- [`clip-path`](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path)
+- [`clip-rule`](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-rule)
 
-### 16. Others组
+- [`filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
+
+### 16. Stack组
+
+### 17. Others组
 
 - `z-index`
 - `opacity`
 - `pointer-events`
 - `user-select`
 - [`all`](https://developer.mozilla.org/en-US/docs/Web/CSS/all)
-- clip-path
-- clip-rule
+- [`cursor`](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor)
 
