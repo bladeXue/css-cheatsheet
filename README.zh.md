@@ -101,7 +101,12 @@
 ### 4. Background组
 
 - [`background`](https://developer.mozilla.org/en-US/docs/Web/CSS/background)：[`background-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color)，[`background-image`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image)，[`background-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)，[`background-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)，[`background-repeat`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat)，[`background-origin`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin)，[`background-clip`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip)和[`background-attachment`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment)8个背景属性的简写。
-- [`background-blend-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-blend-mode)：背景层之间的混合模式。
+
+混合模式相关：
+
+- [`background-blend-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-blend-mode)：元素背景层之间的混合模式。
+- [`mix-blend-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode)：元素内容和背景之间的混合模式。
+- [`isolation`](https://developer.mozilla.org/en-US/docs/Web/CSS/isolation)：隔离堆叠上下文。
 
 ### 5. Font组
 
@@ -171,6 +176,11 @@
 - [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
 - [`opacity`](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
 
+过滤器相关：
+
+- [`filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
+- [`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter)
+
 ### 9. List组
 
 - [`list-style`](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style)：[`list-style-image`](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-image)，[`list-style-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position)和[`list-style-type`](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type)3个列表属性的简写。
@@ -200,7 +210,21 @@
 
 - [`transition`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)：[`transition-property`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property)，[`transition-duration`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration)，[`transition-timing-function`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function)和[`transition-delay`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay)4个过渡属性的简写。
 
-### 14. Page组
+### 14. SVG组
+
+> SVG中所有的[表现属性](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute#presentation_attributes)都可以用作CSS属性，如`fill`和`shape-rendering`等等，这里不做讨论。
+
+### 15. Mask组
+
+- [`mask`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask)：[`mask-image`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-image)，[`mask-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-position)，[`mask-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-size)，[`mask-repeat`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-repeat)，[`mask-clip`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-clip)，[`mask-origin`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-origin)，[`mask-composite`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-composite)和[`mask-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-mode)8个遮罩属性的简写。
+- [`mask-type`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-type)
+
+裁剪相关：
+
+- [`clip-path`](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path)
+- [`clip-rule`](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-rule)
+
+### 16. Page组
 
 - [`size`](https://developer.mozilla.org/en-US/docs/Web/CSS/@page/size)
 - [`page`](https://developer.mozilla.org/en-US/docs/Web/CSS/page)
@@ -209,7 +233,7 @@
 - [`page-break-inside`](https://developer.mozilla.org/en-US/docs/Web/CSS/page-break-inside)：[`break-inside`](https://developer.mozilla.org/en-US/docs/Web/CSS/break-inside)属性的别名。
 - [`widows`](https://developer.mozilla.org/en-US/docs/Web/CSS/widows)/[`orphans`](https://developer.mozilla.org/en-US/docs/Web/CSS/orphans)：设置寡行和孤行，详见[Widows and orphans](https://en.wikipedia.org/wiki/Widows_and_orphans)。
 
-### 15. Scroll组
+### 17. Scroll组
 
 - [`scroll-behavior`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior)
 
@@ -231,36 +255,19 @@
 
 - [`overscroll-behavior`](https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior)：[`overscroll-behavior-x`](https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior-x)和[`overscroll-behavior-y`](https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior-y)2个滚动溢出属性的简写。
 
-> [`overscroll-behavior-inline`](https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior-inline)和[`overscroll-behavior-block`](https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior-block)是受`direction`影响的`overscroll-behavior-*`属性别名，在纵向文本渲染中很有效。
+> [`overscroll-behavior-inline`](https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior-inline)和[`overscroll-behavior-block`](https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior-block)是受`direction`影响的`overscroll-behavior-*`属性别名，写在纵向文本样式中更清晰。
 
-### 16. Browser组
+### 18. Appearance组
 
 - [`appearance`](https://developer.mozilla.org/en-US/docs/Web/CSS/appearance)
-- [`user-select`](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select)
-- [`pointer-events`](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events)
 - [`cursor`](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor)
+- [`pointer-events`](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events)
+- [`user-select`](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select)
 - [`resize`](https://developer.mozilla.org/en-US/docs/Web/CSS/resize)
 
-### 17. Others组
+### 19. Others组
 
 - [`all`](https://developer.mozilla.org/en-US/docs/Web/CSS/all)
 - [`writing-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode)
 - [`z-index`](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index)
-
-渲染模式相关：
-
-- [`filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
-- [`isolation`](https://developer.mozilla.org/en-US/docs/Web/CSS/isolation)
-- [`mix-blend-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode)
-- [`shape-rendering`](https://developer.mozilla.org/en-US/docs/Web/CSS/shape-rendering)
-
-图形裁剪相关：
-
-- [`clip-path`](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path)
-- [`clip-rule`](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-rule)
-
-遮罩相关：
-
-- [`mask`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask)：[`mask-image`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-image)，[`mask-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-position)，[`mask-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-size)，[`mask-repeat`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-repeat)，[`mask-clip`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-clip)，[`mask-origin`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-origin)，[`mask-composite`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-composite)和[`mask-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-mode)8个遮罩属性的简写。
-- [`mask-type`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-type)
 
