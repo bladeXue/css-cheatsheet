@@ -23,6 +23,7 @@
 3. 折叠重复属性，使得每个属性选项最小化。
 4. 有歧义的属性必须添加必要的解释。
 5. 当连续几个属性可以用“同一组解释词”的时候，使用`/`将它们并入同一行。
+6. 多做减法，从来不用的属性没必要记录，比如`accent-color`这样的。
 
 ### 1. Layout组
 
@@ -75,11 +76,6 @@
 - [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width)/[`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height)
 - [`min-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/min-width)/[`min-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/min-height)
 - [`max-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width)/[`max-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/max-height)
-
-图像适应相关：
-
-- [`object-fit`](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
-- [`object-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/object-position)
 
 盒子溢出相关：
 
@@ -142,10 +138,10 @@
 
 文本换行相关：
 
-- [`overflow-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap)：控制换行溢出。
 - [`hyphens`](https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens)：连字符。
 - [`word-break`](https://developer.mozilla.org/en-US/docs/Web/CSS/word-break)：断词换行
 - [`line-break`](https://developer.mozilla.org/en-US/docs/Web/CSS/line-break)：断字换行（主要用于汉字和方块字）。
+- [`overflow-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap)：控制溢出换行。
 
 文本溢出相关：
 
@@ -154,6 +150,12 @@
 文本修饰相关：
 
 - [`text-decoration`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration)：[`text-decoration-line`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-line)，[`text-decoration-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-color)，[`text-decoration-style`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-style)和[`text-decoration-thickness`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-thickness)4个文本修饰属性的简写。
+- [`text-underline-offset`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-underline-offset)/[`text-underline-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-underline-position)
+
+文本强调相关：
+
+- [`text-emphasis`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-emphasis)：[`text-emphasis-style`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-emphasis-style)和[`text-emphasis-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-emphasis-color)2个文本强调属性的简写。
+- [`text-emphasis-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-emphasis-position)
 
 文本转换相关：
 
@@ -198,25 +200,38 @@
 ### 11. Animation组
 
 - [`animation`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)：[`animation-name`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-name)，[`animation-duration`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-duration)，[`animation-timing-function`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function)，[`animation-delay`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay)，[`animation-iteration-count`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count)，[`animation-direction`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)，[`animation-fill-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode)和[`animation-play-state`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state)8个动画属性的简写，其中`animation-name`是由`@keyframes`指定的关键帧名称，且无视属性值顺序（但习惯上放在首位）。
+- [`offset`](https://developer.mozilla.org/en-US/docs/Web/CSS/offset)：[`offset-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/offset-position)，[`offset-path`](https://developer.mozilla.org/en-US/docs/Web/CSS/offset-path)，[`offset-distance`](https://developer.mozilla.org/en-US/docs/Web/CSS/offset-distance)，[`offset-rotate`](https://developer.mozilla.org/en-US/docs/Web/CSS/offset-rotate)和[`offset-anchor`](https://developer.mozilla.org/en-US/docs/Web/CSS/offset-anchor)5个偏移属性的简写。
 
 ### 12. Transform组
 
 - [`transform`](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
 - [`transform-origin`](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin)
 - [`transform-style`](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-style)
+- [`translate`](https://developer.mozilla.org/en-US/docs/Web/CSS/translate)
+- [`rotate`](https://developer.mozilla.org/en-US/docs/Web/CSS/rotate)
 - [`perspective`](https://developer.mozilla.org/en-US/docs/Web/CSS/perspective)
 - [`perspective-origin`](https://developer.mozilla.org/en-US/docs/Web/CSS/perspective-origin)
-- [`backface-visibility`](https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility)：可变换元素的背面可见性。
+- [`backface-visibility`](https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility)
 
 ### 13. Transition组
 
 - [`transition`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)：[`transition-property`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property)，[`transition-duration`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration)，[`transition-timing-function`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function)和[`transition-delay`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay)4个过渡属性的简写。
 
-### 14. SVG组
+### 14. Image组
 
-> SVG中所有的[表现属性](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute#presentation_attributes)都可以用作CSS属性，如`fill`和`shape-rendering`等等，这里不做讨论。
+- [`image-rendering`](https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering)
+- [`image-orientation`](https://developer.mozilla.org/en-US/docs/Web/CSS/image-orientation)
 
-### 15. Mask组
+盒子适应相关：
+
+- [`object-fit`](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
+- [`object-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/object-position)
+
+### 15. SVG组
+
+> SVG中所有的[表现属性](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute#presentation_attributes)都可以用作CSS属性，如`fill`和`shape-rendering`等等，此处省略。
+
+### 16. Mask组
 
 - [`mask`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask)：[`mask-image`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-image)，[`mask-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-position)，[`mask-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-size)，[`mask-repeat`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-repeat)，[`mask-clip`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-clip)，[`mask-origin`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-origin)，[`mask-composite`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-composite)和[`mask-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-mode)8个遮罩属性的简写。
 - [`mask-type`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-type)
@@ -226,18 +241,16 @@
 - [`clip-path`](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path)
 - [`clip-rule`](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-rule)
 
-### 16. Page组
+### 17. Page组
 
 - [`size`](https://developer.mozilla.org/en-US/docs/Web/CSS/@page/size)
 - [`page`](https://developer.mozilla.org/en-US/docs/Web/CSS/page)
-- [`break-after`](https://developer.mozilla.org/en-US/docs/Web/CSS/break-after)
-- [`break-before`](https://developer.mozilla.org/en-US/docs/Web/CSS/break-before)
-- [`break-inside`](https://developer.mozilla.org/en-US/docs/Web/CSS/break-inside)
+- [`break-after`](https://developer.mozilla.org/en-US/docs/Web/CSS/break-after)/[`break-before`](https://developer.mozilla.org/en-US/docs/Web/CSS/break-before)/[`break-inside`](https://developer.mozilla.org/en-US/docs/Web/CSS/break-inside)
 - [`widows`](https://developer.mozilla.org/en-US/docs/Web/CSS/widows)/[`orphans`](https://developer.mozilla.org/en-US/docs/Web/CSS/orphans)：设置寡行和孤行，详见[Widows and orphans](https://en.wikipedia.org/wiki/Widows_and_orphans)。
 
 > `page-break-*`是`break-*`族属性的旧称，但主流浏览器出于兼容性考虑，仍保留了这种写法作为别名。
 
-### 17. Scroll组
+### 18. Scroll组
 
 - [`scroll-behavior`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior)
 
@@ -261,15 +274,17 @@
 
 > [`overscroll-behavior-inline`](https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior-inline)和[`overscroll-behavior-block`](https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior-block)是受`direction`影响的`overscroll-behavior-*`属性别名，写在纵向文本样式中更清晰。
 
-### 18. Appearance组
+### 19. Appearance组
 
 - [`appearance`](https://developer.mozilla.org/en-US/docs/Web/CSS/appearance)
 - [`cursor`](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor)
 - [`pointer-events`](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events)
 - [`user-select`](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select)
 - [`resize`](https://developer.mozilla.org/en-US/docs/Web/CSS/resize)
+- [`accent-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/accent-color)
+- [`caret-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color)
 
-### 19. Others组
+### 20. Others组
 
 - [`all`](https://developer.mozilla.org/en-US/docs/Web/CSS/all)
 - [`writing-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode)
