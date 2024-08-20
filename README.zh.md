@@ -44,7 +44,6 @@
 
 - [`columns`](https://developer.mozilla.org/en-US/docs/Web/CSS/columns)：[`column-count`](https://developer.mozilla.org/en-US/docs/Web/CSS/column-count)和[`column-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/column-width)2个列容器属性的简写。
 - [`column-rule`](https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule)：[`column-rule-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-width)，[`column-rule-style`](https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-style)和[`column-rule-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-color)3个列规则属性的简写。
-- [`column-gap`](https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap)
 - [`column-fill`](https://developer.mozilla.org/en-US/docs/Web/CSS/column-fill)
 - [`column-span`](https://developer.mozilla.org/en-US/docs/Web/CSS/column-span)
 
@@ -54,16 +53,19 @@
 - [`flex`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex)：[`flex-grow`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow)，[`flex-shrink`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink)和[`flex-basis`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis)3个弹性项属性的简写。
 - [`justify-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)/[`justify-items`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items)/[`justify-self`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self)：主轴对齐方式。
 - [`align-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content)/[`align-items`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)/[`align-self`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self)：交叉轴对齐方式。
-- [`order`](https://developer.mozilla.org/en-US/docs/Web/CSS/order)：顺序权重。
 
 网格布局相关：
 
 - [`grid`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid)：[`grid-template-rows`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows)，[`grid-template-columns`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns)，[`grid-template-areas`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas)，[`grid-auto-rows`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows)，[`grid-auto-columns`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns)和[`grid-auto-flow`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow)6个网格容器属性的简写。
 - [`grid-area`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-area)：[`grid-row-start`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-start)，[`grid-column-start`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-start)，[`grid-row-end`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-end)和[`grid-column-end`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-end)4个网格项属性的简写，用于向指定容器区域分配网格项。
-- [`grid-gap`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap)：[`grid-row-gap`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-gap)和[`grid-column-gap`](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-gap)2个网格间距属性的简写。
 - [`place-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/place-content)/[`place-items`](https://developer.mozilla.org/en-US/docs/Web/CSS/place-items)/[`place-self`](https://developer.mozilla.org/en-US/docs/Web/CSS/place-self)：`justify-*`和`align-*`族属性在网格系统中的简写。
 
-> `justify-*`，`align-*`和`order`属性，可同时用于Flex系统和Grid系统。
+通用对齐相关：
+
+- [`gap`](https://developer.mozilla.org/en-US/docs/Web/CSS/gap)：[`row-gap`](https://developer.mozilla.org/en-US/docs/Web/CSS/row-gap)和[`column-gap`](https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap)2个间距属性的简写。由`column-gap`和`grid-gap`扩展而来的新属性，可同时用于多列容器，弹性容器和网格容器。
+- [`order`](https://developer.mozilla.org/en-US/docs/Web/CSS/order)：顺序权重，可同时用于弹性项和网格项。
+
+> 关于`justify-*`，`align-*`，`place-*`，`gap`和`order`等盒子对齐属性的通用行为，详见标准草案[CSS Box Alignment Module Level 3](https://www.w3.org/TR/2023/WD-css-align-3-20230217/)。
 
 ### 2. Box组
 
@@ -228,10 +230,12 @@
 
 - [`size`](https://developer.mozilla.org/en-US/docs/Web/CSS/@page/size)
 - [`page`](https://developer.mozilla.org/en-US/docs/Web/CSS/page)
-- [`page-break-after`](https://developer.mozilla.org/en-US/docs/Web/CSS/page-break-after)：[`break-after`](https://developer.mozilla.org/en-US/docs/Web/CSS/break-after)属性的别名。
-- [`page-break-before`](https://developer.mozilla.org/en-US/docs/Web/CSS/page-break-before)：[`break-before`](https://developer.mozilla.org/en-US/docs/Web/CSS/break-before)属性的别名。
-- [`page-break-inside`](https://developer.mozilla.org/en-US/docs/Web/CSS/page-break-inside)：[`break-inside`](https://developer.mozilla.org/en-US/docs/Web/CSS/break-inside)属性的别名。
+- [`break-after`](https://developer.mozilla.org/en-US/docs/Web/CSS/break-after)
+- [`break-before`](https://developer.mozilla.org/en-US/docs/Web/CSS/break-before)
+- [`break-inside`](https://developer.mozilla.org/en-US/docs/Web/CSS/break-inside)
 - [`widows`](https://developer.mozilla.org/en-US/docs/Web/CSS/widows)/[`orphans`](https://developer.mozilla.org/en-US/docs/Web/CSS/orphans)：设置寡行和孤行，详见[Widows and orphans](https://en.wikipedia.org/wiki/Widows_and_orphans)。
+
+> `page-break-*`是`break-*`族属性的旧称，但主流浏览器出于兼容性考虑，仍保留了这种写法作为别名。
 
 ### 17. Scroll组
 
