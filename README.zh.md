@@ -81,7 +81,7 @@
 
 盒子溢出相关：
 
-- [`overflow`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow)：[`overflow-x`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-x)和[`overflow-y`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-y)2个溢出属性的简写。
+- [`overflow`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow)：[`overflow-x`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-x)和[`overflow-y`](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-y)2个溢出属性的简写。特别地，当元素设置`overflow: scroll`时会创建一个[滚动容器](https://developer.mozilla.org/en-US/docs/Glossary/Scroll_container)。
 - [`box-decoration-break`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break)：设置盒子碎片化模式。
 
 ### 3. Border组
@@ -212,11 +212,14 @@
 ### 15. Scroll组
 
 - [`scroll-behavior`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior)
-- [`scroll-margin`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-margin)
-- [`scroll-padding`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-padding)
+
+滚动吸附相关：
+
 - [`scroll-snap-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-align)
 - [`scroll-snap-stop`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-stop)
 - [`scroll-snap-type`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type)
+- [`scroll-margin`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-margin)：通过外边距来设置滚动留白。
+- [`scroll-padding`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-padding)：通过内边距来设置滚动留白。
 
 滚动条相关：
 
